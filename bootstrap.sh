@@ -40,7 +40,7 @@ mac=`echo $mac | tr "[:upper:]" "[:lower:]"`
 # ---------------------------------------------------------------------------
 data="{\"mac\" : \"${mac}\"}"
 msmid=$( (curl -X POST -H "Content-Type: application/json" -d "$data" \
-https://measurements.vaibhavbajpai.com/msmpoint --cacert \
+https://leone-collector.eecs.jacobs-university.de/msmpoint --cacert \
 "$MTRDIR/server.crt" --cert "$MTRDIR/client.crt" --key \
 "$MTRDIR/client.key" ) 2> /dev/null );
 
